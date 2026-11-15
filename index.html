@@ -54,7 +54,6 @@ legend{padding:0;margin-bottom:8px}
 .pill{padding:10px 14px;border-radius:999px;border:var(--ol);background:var(--white);font-size:14px;font-weight:600;cursor:pointer}
 .sr:checked+.pill{background:var(--black);color:var(--paper)}
 .sr:focus-visible+.pill{outline:3px solid var(--chianti);outline-offset:2px}
-.trap{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 .error{font-size:14px;font-weight:600;color:var(--chianti);min-height:20px;margin:0}
 .send{align-self:flex-start;background:var(--black);color:var(--paper);border:var(--ol);border-radius:12px;padding:14px 22px;font-family:var(--sans);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;cursor:pointer;display:inline-flex;align-items:center;gap:10px}
 .send svg{transition:transform .2s ease}
@@ -125,10 +124,6 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding
             <input class="sr" type="radio" name="budget" id="b4" value="Not sure yet"><label class="pill" for="b4">Not sure yet</label>
           </div>
         </fieldset>
-        <div class="trap" aria-hidden="true">
-          <label for="f-web">Leave this field empty</label>
-          <input id="f-web" name="company_website" type="text" tabindex="-1" autocomplete="off">
-        </div>
         <p class="error" id="form-error" role="alert"></p>
         <button class="send" type="submit">Send it over<svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="11" fill="#f3ac1d"></circle><path d="M7 12 H16 M12.5 8 L16.5 12 L12.5 16" fill="none" stroke="#010101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
       </form>
@@ -177,6 +172,7 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding
   }
 
   // Form: send to the site's own function, which emails it on. The inbox address is never in this page.
+  var loadedAt = Date.now();
   var form = document.getElementById("contact");
   var err = document.getElementById("form-error");
   var thanks = document.getElementById("thanks");
@@ -185,6 +181,9 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding
     e.preventDefault();
     var data = {};
     new FormData(form).forEach(function (v, k) { data[k] = v; });
+    // Spam check: only a real browser that ran this script and spent a moment on the page sends these.
+    data.k = "lwd-form-1";
+    data.t = Date.now() - loadedAt;
     if (!String(data.name || "").trim()) { err.textContent = "I need a name to reply to."; return; }
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(data.email || "")) { err.textContent = "That email doesn't look right."; return; }
     if (String(data.message || "").trim().length < 10) { err.textContent = "A sentence or two about the project is plenty."; return; }

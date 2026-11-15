@@ -15,8 +15,9 @@ module.exports = async (req, res) => {
 
   const body = req.body && typeof req.body === "object" ? req.body : {};
 
-  // Hidden trap field: real visitors never fill it in. Pretend success so bots move on.
-  if (clean(body.company_website, 200)) return res.status(200).json({ ok: true });
+  // Spam check: the page's own script adds a marker and how long the visitor was on the page.
+  // Bots that post straight to this address have neither. Pretend success so they move on.
+  if (body.k !== "lwd-form-1" || !(Number(body.t) >= 1500)) return res.status(200).json({ ok: true });
 
   const name = clean(body.name, 120);
   const email = clean(body.email, 200);
