@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leigh Williams Design | Brand &amp; Packaging Design for Food, Drink and Pet Brands</title>
+<meta name="description" content="Brand identity and packaging design for food, drink and pet brands. An independent studio in Maryland, led by Leigh Williams. New site on the way.">
+<meta property="og:title" content="Leigh Williams Design | Brand &amp; Packaging Design">
+<meta property="og:description" content="Brand identity and packaging design for food, drink and pet brands. An independent studio in Maryland, working with brands globally.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;600&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Leigh Williams Design","description":"Brand identity and packaging design for food, drink and pet brands.","address":{"@type":"PostalAddress","addressRegion":"MD","addressCountry":"US"},"areaServed":"Worldwide"}</script>
+<style>
+@font-face{font-family:"Notulen";src:url("/fonts/Notulen.woff2") format("woff2"),url("/fonts/Notulen.woff") format("woff");font-weight:100 900;font-style:normal;font-display:swap}
+:root{
+  --black:#010101;--cream:#f1e7d7;--sunshine:#f3ac1d;--chianti:#8c1739;--candy:#f69fa2;--flamingo:#f06165;--olive:#a29432;--sky:#8fc4e8;
+  --white:#fffdf9;--paper:#faf5ec;--ink-700:#37332d;--ink-500:#7e7668;
+  --display:"Notulen","Times New Roman",Times,serif;--sans:"Inter",Arial,Helvetica,sans-serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --ol:2px solid var(--black);--pop:5px 5px 0 var(--black);--gap:clamp(14px,1.6vw,20px)
+}
+*{box-sizing:border-box}
+body{margin:0;overflow-x:clip;background:var(--cream);font-family:var(--sans);color:var(--black)}
+:focus-visible{outline:3px solid var(--chianti);outline-offset:2px}
+.page{max-width:1240px;margin:0 auto;padding:clamp(16px,3vw,32px);display:flex;flex-direction:column;gap:var(--gap)}
+main{display:flex;flex-wrap:wrap;gap:var(--gap);align-items:stretch}
+.card{border:var(--ol);border-radius:22px;box-shadow:var(--pop)}
+.kicker{font-family:var(--mono);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.hero{flex:999 1 520px;min-width:0;position:relative;background:var(--white);padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;justify-content:space-around;gap:16px;overflow:hidden}
+.star{position:absolute;right:clamp(12px,2.4vw,32px);top:clamp(12px,2.4vw,28px);width:clamp(150px,22vw,240px);aspect-ratio:1;display:flex;align-items:center;justify-content:center}
+.star svg{position:absolute;inset:0;width:100%;height:100%;animation:spin 28s linear infinite;transform-origin:50% 50%}
+.star span{position:relative;text-align:center;font-family:var(--mono);font-size:clamp(9px,1.1vw,13px);line-height:1.25;text-transform:uppercase;letter-spacing:.05em;font-weight:600}
+.logo{position:relative;align-self:flex-start;display:block;height:52px;width:auto;max-width:min(100%,345px)}
+.tag{align-self:flex-start;background:var(--candy);border:var(--ol);border-radius:6px;padding:8px 14px;transform:rotate(-3deg);box-shadow:3px 3px 0 var(--black)}
+.hero-copy{position:relative;display:flex;flex-direction:column;gap:24px}
+h1{margin:0;font-family:var(--display);font-weight:800;font-size:clamp(44px,6.6vw,104px);line-height:.9;letter-spacing:0;text-wrap:balance}
+h1 span{color:var(--flamingo)}
+.hero-copy p{margin:0;max-width:600px;font-size:18px;line-height:1.65;text-wrap:pretty}
+.start{flex:1 1 360px;min-width:0;background:var(--sunshine);padding:clamp(24px,3vw,40px);display:flex;flex-direction:column}
+form{display:flex;flex-direction:column;gap:20px}
+h2{margin:0;font-family:var(--display);font-weight:800;line-height:1;letter-spacing:-.02em}
+.start h2{font-size:clamp(30px,3vw,42px);line-height:.96}
+.start .intro{margin:8px 0 0;font-size:15px;line-height:1.55}
+.field{display:flex;flex-direction:column;gap:6px}
+input[type=text],input[type=email],textarea{width:100%;background:var(--white);border:var(--ol);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:16px;line-height:1.5;color:var(--black)}
+textarea{resize:vertical}
+::placeholder{color:var(--ink-500)}
+fieldset{border:0;margin:0;padding:0}
+legend{padding:0;margin-bottom:8px}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.pill{padding:10px 14px;border-radius:999px;border:var(--ol);background:var(--white);font-size:14px;font-weight:600;cursor:pointer}
+.sr:checked+.pill{background:var(--black);color:var(--paper)}
+.sr:focus-visible+.pill{outline:3px solid var(--chianti);outline-offset:2px}
+.trap{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.error{font-size:14px;font-weight:600;color:var(--chianti);min-height:20px;margin:0}
+.send{align-self:flex-start;background:var(--black);color:var(--paper);border:var(--ol);border-radius:12px;padding:14px 22px;font-family:var(--sans);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;cursor:pointer;display:inline-flex;align-items:center;gap:10px}
+.send svg{transition:transform .2s ease}
+.send:hover svg,.send:focus-visible svg{transform:translateX(5px)}
+.send[disabled]{opacity:.6;cursor:default}
+.send[disabled] svg{transform:none}
+.thanks{flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px}
+.thanks h2{font-size:clamp(36px,4vw,56px);line-height:.94;letter-spacing:-.03em}
+.thanks p{margin:0;font-size:17px;line-height:1.6}
+[hidden]{display:none !important}
+.icons{padding:clamp(12px,1.6vw,20px) clamp(24px,4vw,56px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-around;gap:24px}
+.icons svg{width:64px;height:80px;stroke:var(--black);stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:var(--gap)}
+.services div{padding:24px;display:flex;flex-direction:column;gap:10px}
+.services h2{font-size:30px}
+.services p{margin:0;font-size:15px;line-height:1.55}
+.marquee{width:100vw;margin-left:calc(50% - 50vw);margin-top:8px;height:48px;border-top:var(--ol);border-bottom:var(--ol);background:var(--chianti);color:var(--paper);overflow:hidden;display:flex;align-items:center}
+.marquee-track{display:flex;width:max-content;white-space:nowrap;font-family:var(--mono);font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:.05em}
+.marquee-track span{padding-right:.6em}
+.marquee-track.run{animation:marquee var(--dur,60s) linear infinite}
+footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding:8px 6px 0;font-size:13px;color:var(--ink-700)}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes marquee{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.star svg,.marquee-track.run{animation:none}.send svg{transition:none}}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <main>
+    <section class="card hero">
+      <div class="star">
+        <svg aria-hidden="true" viewBox="0 0 100 100"><path d="M50 2 L58 30 L84 16 L70 42 L98 50 L70 58 L84 84 L58 70 L50 98 L42 70 L16 84 L30 58 L2 50 L30 42 L16 16 L42 30 Z" fill="#f3ac1d" stroke="#010101" stroke-width="2" stroke-linejoin="round" vector-effect="non-scaling-stroke"></path></svg>
+        <span>New site<br>on the<br>way</span>
+      </div>
+      <img class="logo" src="/images/lwd-logo-dark-horz.svg" alt="Leigh Williams Design, graphic and web design" width="345" height="52">
+      <span class="kicker tag">Brand · Packaging · Web</span>
+      <div class="hero-copy">
+        <h1>Brand and packaging design for food, drink and pet&nbsp;brands<span>.</span></h1>
+        <p>Leigh Williams Design is an independent studio in Maryland. I build brand identities and packaging for consumer products, and for the cafes and restaurants that deserve the same&nbsp;care.</p>
+      </div>
+    </section>
+
+    <section class="card start" aria-labelledby="start-title">
+      <form id="contact" novalidate>
+        <div>
+          <h2 id="start-title">Start a&nbsp;project</h2>
+          <p class="intro">Tell me what you're working on. I reply within two working&nbsp;days.</p>
+        </div>
+        <div class="field">
+          <label class="kicker" for="f-name">Your name</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label class="kicker" for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required>
+        </div>
+        <div class="field">
+          <label class="kicker" for="f-msg">What are you working on?</label>
+          <textarea id="f-msg" name="message" rows="4" required></textarea>
+        </div>
+        <fieldset>
+          <legend class="kicker">Budget</legend>
+          <div class="pills">
+            <input class="sr" type="radio" name="budget" id="b1" value="$10k to $15k"><label class="pill" for="b1">$10k to $15k</label>
+            <input class="sr" type="radio" name="budget" id="b2" value="$15k to $20k"><label class="pill" for="b2">$15k to $20k</label>
+            <input class="sr" type="radio" name="budget" id="b3" value="$20k and up"><label class="pill" for="b3">$20k and up</label>
+            <input class="sr" type="radio" name="budget" id="b4" value="Not sure yet"><label class="pill" for="b4">Not sure yet</label>
+          </div>
+        </fieldset>
+        <div class="trap" aria-hidden="true">
+          <label for="f-web">Leave this field empty</label>
+          <input id="f-web" name="company_website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <p class="error" id="form-error" role="alert"></p>
+        <button class="send" type="submit">Send it over<svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="11" fill="#f3ac1d"></circle><path d="M7 12 H16 M12.5 8 L16.5 12 L12.5 16" fill="none" stroke="#010101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+      </form>
+      <div class="thanks" id="thanks" tabindex="-1" hidden>
+        <h2>Got it, thanks.</h2>
+        <p>I'll read it properly and come back within two working&nbsp;days.</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="icons" aria-hidden="true">
+    <svg viewBox="0 0 64 80" fill="#f3ac1d"><path d="M14 8 H50 L52 70 Q32 76 12 70 Z"></path><path d="M13 18 H51" fill="none"></path><g fill="#fffdf9" stroke-width="2"><ellipse cx="32" cy="50" rx="8" ry="6.5"></ellipse><ellipse cx="21.5" cy="41" rx="3" ry="4"></ellipse><ellipse cx="28.5" cy="35.5" rx="3" ry="4"></ellipse><ellipse cx="35.5" cy="35.5" rx="3" ry="4"></ellipse><ellipse cx="42.5" cy="41" rx="3" ry="4"></ellipse></g></svg>
+    <svg viewBox="0 0 64 80" fill="#a29432"><path d="M26 4 H38 V16 Q48 22 48 34 V72 Q48 76 44 76 H20 Q16 76 16 72 V34 Q16 22 26 16 Z"></path><rect x="16" y="40" width="32" height="20" fill="#fffdf9"></rect></svg>
+    <svg viewBox="0 0 64 80" fill="#8fc4e8"><path d="M13 6 H51 L44 58 H20 Z"></path><path d="M14 13 H50" fill="none"></path><rect x="24" y="24" width="16" height="20" rx="3" fill="#fffdf9"></rect><rect x="21" y="58" width="22" height="17" rx="2" fill="#fffdf9"></rect></svg>
+    <svg viewBox="0 0 64 80" fill="#fffdf9"><path d="M14 20 H50 L45 75 H19 Z"></path><rect x="10" y="11" width="44" height="9" rx="3" fill="#8c1739"></rect><path d="M16.5 38 H47.5 L46 55 H18 Z" fill="#f06165"></path></svg>
+    <svg viewBox="0 0 64 80" fill="#f69fa2"><path d="M10 12 L40 16 V76 L10 70 Z"></path><path d="M40 16 L53 12 V70 L40 76 Z" fill="#f06165"></path><path d="M10 12 L23 8 L53 12 L40 16 Z" fill="#fffdf9"></path><circle cx="25" cy="48" r="9" fill="#fffdf9"></circle></svg>
+  </div>
+
+  <section class="services" aria-label="Services">
+    <div class="card" style="background:var(--candy)"><h2>Brand identity</h2><p>A full visual system, not a logo on its&nbsp;own.</p></div>
+    <div class="card" style="background:var(--olive)"><h2>Packaging</h2><p>Designed for a real shelf and built to print&nbsp;right.</p></div>
+    <div class="card" style="background:var(--sky)"><h2>Websites</h2><p>Shopify stores and sites that match the rest of the&nbsp;brand.</p></div>
+  </section>
+
+  <div class="marquee">
+    <div class="marquee-track" id="marquee"><span>Maryland based ✦ Working with brands globally ✦</span></div>
+  </div>
+
+  <footer>
+    <span>© 2026 Leigh Williams Design</span>
+    <span>Brand · Packaging · Web</span>
+  </footer>
+</div>
+
+<script>
+(function () {
+  // Marquee: repeat the one phrase in the page until it fills the screen, then loop.
+  var track = document.getElementById("marquee");
+  if (track && track.firstElementChild) {
+    var unit = track.firstElementChild;
+    var count = Math.ceil((window.innerWidth * 1.2) / Math.max(unit.offsetWidth, 1)) + 1;
+    for (var i = 1; i < count; i++) { var c = unit.cloneNode(true); c.setAttribute("aria-hidden", "true"); track.appendChild(c); }
+    Array.prototype.slice.call(track.children).forEach(function (n) { var d = n.cloneNode(true); d.setAttribute("aria-hidden", "true"); track.appendChild(d); });
+    track.style.setProperty("--dur", Math.max(20, Math.round(track.scrollWidth / 2 / 60)) + "s");
+    track.classList.add("run");
+  }
+
+  // Form: send to the site's own function, which emails it on. The inbox address is never in this page.
+  var form = document.getElementById("contact");
+  var err = document.getElementById("form-error");
+  var thanks = document.getElementById("thanks");
+  if (!form) return;
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var data = {};
+    new FormData(form).forEach(function (v, k) { data[k] = v; });
+    if (!String(data.name || "").trim()) { err.textContent = "I need a name to reply to."; return; }
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(data.email || "")) { err.textContent = "That email doesn't look right."; return; }
+    if (String(data.message || "").trim().length < 10) { err.textContent = "A sentence or two about the project is plenty."; return; }
+    err.textContent = "";
+    var btn = form.querySelector(".send");
+    btn.disabled = true;
+    fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) })
+      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok && j.ok, msg: j.error }; }); })
+      .then(function (res) {
+        if (res.ok) { form.hidden = true; thanks.hidden = false; thanks.focus(); }
+        else { err.textContent = res.msg || "That didn't send. Please try again in a minute."; btn.disabled = false; }
+      })
+      .catch(function () { err.textContent = "That didn't send. Please try again in a minute."; btn.disabled = false; });
+  });
+})();
+</script>
+</body>
+</html>
